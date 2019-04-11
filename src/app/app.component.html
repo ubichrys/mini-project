@@ -1,0 +1,10 @@
+<h1> This is my {{ title }}! </h1>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active"  > Europe Region </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/currencies']" routerLinkActive="router-link-active" > Currencies </a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

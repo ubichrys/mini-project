@@ -1,0 +1,22 @@
+<div class="myothercontainer">
+
+  <div class="col1">
+    <ul *ngFor="let country of countries;" >
+      <li>
+        {{ country.name }}, {{ country.capital }}
+        <ul *ngFor="let currency of country.currencies;" >
+          <li>
+            <a [routerLink]="['/currency-countries', currency.code]" routerLinkActive="router-link-active">
+              {{ currency.code }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col2">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
